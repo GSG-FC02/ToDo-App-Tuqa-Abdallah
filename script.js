@@ -7,6 +7,8 @@ let list = document.querySelector('.toDoList');
 
 addBoton.addEventListener('click', function(){
   if (addToDo.value !== ""){
+    save();
+
   var yourList = document.createElement('li');
   yourList.innerText = addToDo.value; 
   list.appendChild(yourList);
@@ -22,3 +24,19 @@ addBoton.addEventListener('click', function(){
   }
 }
 })
+
+/////////////////////////////////////////////////////////////////////
+
+function save(){
+  let newData = addToDo.value;
+  if (localStorage.getItem('data') == null){
+    localStorage.setItem('data','[]');
+  }
+
+  let oldData = JSON.parse(localStorage.getItem('data'));
+  oldData.push(newData);
+localStorage.setItem('data',JSON.stringify(oldData));
+
+}
+
+///////////////////////////////////////////
