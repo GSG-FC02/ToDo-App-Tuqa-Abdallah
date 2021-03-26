@@ -77,7 +77,6 @@ header h3::first-letter{
   overflow: auto;
 }
 .toDoList li{
-  list-style: none;
   height: 50px;
   line-height: 50px;
   margin-bottom: 30px;
