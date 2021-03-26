@@ -70,21 +70,43 @@ header h3::first-letter{
   cursor: pointer;
   border-radius: 3px;
 }
-.container .todoList{
+.container .toDoList{
+  list-style: none;
   max-height: 320px;
   list-style: none;
   overflow: auto;
 }
-.todoList li{
-  /* position: relative; */
+.toDoList li{
   list-style: none;
   height: 50px;
   line-height: 50px;
   margin-bottom: 30px;
   background: #cfc9c9d0;
   border-radius: 2px;
-  padding: 0 15px;
-  overflow: hidden;
+  padding: 0 0 0 15px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.toDoList li span{
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(235, 53, 53);
+  color: white;
+}
+.toDoList li span:hover{
+  cursor: pointer;
+}
+.toDoList li span:active{
+  color: rgb(235, 53, 53);
+  background-color: #5d0fc2;
 }
 footer{
     width: 100%;
